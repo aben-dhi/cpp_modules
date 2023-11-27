@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:26:34 by aben-dhi          #+#    #+#             */
-/*   Updated: 2023/11/24 17:15:32 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2023/11/26 19:06:29 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Ice : public AMateria
 		Ice();
 		Ice(const Ice &ice);
 		Ice &operator=(const Ice &ice);
-		virtual ~Ice();
+		~Ice();
 		AMateria *clone() const;
 		void use(ICharacter &target);
 };

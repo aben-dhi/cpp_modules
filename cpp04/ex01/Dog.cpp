@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:15:16 by aben-dhi          #+#    #+#             */
-/*   Updated: 2023/11/24 14:48:28 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:47:51 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Dog &Dog::operator=(const Dog &dog)
 	{
 		if (this->brain)
 			delete this->brain;
+		this->brain = new Brain();
 		this->type = dog.type;
 		*this->brain = *dog.brain;
 	}

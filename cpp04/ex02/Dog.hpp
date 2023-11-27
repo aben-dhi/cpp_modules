@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:15:20 by aben-dhi          #+#    #+#             */
-/*   Updated: 2023/11/24 14:48:10 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2023/11/26 19:06:54 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog : public Animal
 		Dog();
 		Dog(const Dog &dog);
 		Dog &operator=(const Dog &dog);
-		virtual ~Dog();
+		~Dog();
 		void makeSound() const;
 		std::string getBrainIdea(int index) const;
 		void setBrainIdea(int index, std::string idea);

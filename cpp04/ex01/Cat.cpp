@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:14:07 by aben-dhi          #+#    #+#             */
-/*   Updated: 2023/11/24 14:51:15 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:47:43 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Cat &Cat::operator=(const Cat &cat)
 	{
 		if (this->brain)
 			delete this->brain;
+		this->brain = new Brain();
 		this->type = cat.type;
 		*this->brain = *cat.brain;
 	}

@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:18:42 by aben-dhi          #+#    #+#             */
-/*   Updated: 2023/11/16 17:19:05 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2023/11/26 19:03:59 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongCat : public WrongAnimal
 		WrongCat();
 		WrongCat(const WrongCat &cat);
 		WrongCat &operator=(const WrongCat &cat);
-		virtual ~WrongCat();
+		~WrongCat();
 		void makeSound() const;
 };
 

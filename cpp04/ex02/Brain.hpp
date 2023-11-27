@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:23:52 by aben-dhi          #+#    #+#             */
-/*   Updated: 2023/11/24 14:37:28 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2023/11/26 19:04:36 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Brain
 		Brain();
 		Brain(const Brain &brain);
 		Brain &operator=(const Brain &brain);
-		virtual ~Brain();
+		~Brain();
 		std::string getIdea(int index) const;
 		void setIdea(int index, std::string idea);
 };

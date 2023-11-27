@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:26:19 by aben-dhi          #+#    #+#             */
-/*   Updated: 2023/11/25 16:33:22 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2023/11/26 19:06:33 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Cure : public AMateria
 		Cure();
 		Cure(const Cure &cure);
 		Cure &operator=(const Cure &cure);
-		virtual ~Cure();
+		~Cure();
 		AMateria *clone() const;
 		void use(ICharacter &target);
 };
