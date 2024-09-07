@@ -1,6 +1,7 @@
 SRCS =	main.cpp \
+		PmergeMe.cpp\
 
-NAME = Iter
+NAME = PmergeMe
 
 OBJS := $(SRCS:%.cpp=%.o)
 

@@ -1,7 +1,7 @@
 SRCS =	main.cpp \
-		ScalarConverter.cpp \
+		RPN.cpp\
 
-NAME = convert
+NAME = RPN
 
 OBJS := $(SRCS:%.cpp=%.o)
 

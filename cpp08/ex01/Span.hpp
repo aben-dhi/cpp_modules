@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   span.hpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:46:35 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/05/03 19:46:57 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/07/09 09:26:09 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ public:
 	Span &operator=(Span const &s);
 	~Span();
 	void addNumber(int n);
+	void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 	int shortestSpan();
 	int longestSpan();
+	unsigned int getN() const;
 };
+std::ostream &operator<<(std::ostream &o, Span const &s);
 
 #endif

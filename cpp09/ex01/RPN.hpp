@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 20:07:28 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/04/29 20:08:00 by aben-dhi         ###   ########.fr       */
+/*   Created: 2024/07/12 12:46:39 by aben-dhi          #+#    #+#             */
+/*   Updated: 2024/07/12 13:27:04 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#ifndef RPN_HPP
+#define RPN_HPP
 
 #include <iostream>
-#include <string>
-#include <iomanip>
-#include <limits>
+#include <stack>
+#include <sstream>
 #include <cmath>
 
-class ScalarConverter
+class RPN
 {
-private:
-	std::string _input;
-public:
-	ScalarConverter(std::string input);
-	ScalarConverter(ScalarConverter const &src);
-	~ScalarConverter();
-	ScalarConverter &operator=(ScalarConverter const &src);
-	void convert();
+	private:
+		std::stack<double> _stack;
+		double _result;
+		
+			
+	public:
+		RPN();
+		RPN(const RPN &copy);
+		RPN &operator=(const RPN &other);
+		~RPN();
+		void do_op(const std::string &str);
+		double get_result() const;
+		int add(int a, int b);
+		int sub(int a, int b);
+		int mul(int a, int b);
+		int div(int a, int b);
+		int myStoi(const std::string &str);
 };
 
 #endif

@@ -1,7 +1,7 @@
 SRCS =	main.cpp \
 		BitcoinExchange.cpp \
 
-NAME = Btc
+NAME = btc
 
 OBJS := $(SRCS:%.cpp=%.o)
 

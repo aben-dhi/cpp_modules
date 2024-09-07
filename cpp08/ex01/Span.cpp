@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:46:29 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/05/08 12:49:20 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/07/09 09:27:45 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,23 @@ Span::~Span()
 
 void Span::addNumber(int n)
 {
-	// if (_v.size() == _n)
-	// 	throw std::exception();
+	if (_v.size() >= _n)
+		throw std::exception();
 	_v.push_back(n);
 	std::cout << "number added : " << n << std::endl;
+}
+
+void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	if (_v.size() + std::distance(begin, end) > _n)
+		throw std::exception();
+	_v.insert(_v.end(), begin, end);
 }
 
 int Span::shortestSpan()
 {
 	if (_v.size() < 2)
-		throw std::exception();
+		throw std::exception() ;
 	std::vector<int> v = _v;
 	std::sort(v.begin(), v.end());
 	int min = v[1] - v[0];
@@ -68,4 +75,15 @@ int Span::longestSpan()
 	std::vector<int> v = _v;
 	std::sort(v.begin(), v.end());
 	return v[v.size() - 1] - v[0];
+}
+
+unsigned int Span::getN() const
+{
+	return _n;
+}
+
+std::ostream &operator<<(std::ostream &o, Span const &s)
+{
+	o << s.getN() << std::endl;
+	return o;
 }
